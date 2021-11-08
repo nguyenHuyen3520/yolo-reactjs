@@ -1,10 +1,12 @@
 import React from 'react'
-
+import Helmet from '../components/Helmet'
 const Catalog = () => {
 
 
     return (
-        Catalog
+        <Helmet title="Sản phẩm">
+            Catalog
+        </Helmet>
     )
 }
 
