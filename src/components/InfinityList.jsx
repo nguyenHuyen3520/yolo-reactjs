@@ -19,12 +19,17 @@ const InfinityList = props => {
     }, [props.data])
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY + window.innerHeight >= listRef.current.clientHeight + listRef.current.offsetTop + 200) {
-                
-                setLoad(true)
+        const buttonFilter= () => {
+            if (listRef && listRef.current) {
+                if (window.scrollY + window.innerHeight >= listRef.current.clientHeight + listRef.current.offsetTop + 200) {                
+                    setLoad(true)
+                }
             }
-        })
+        }
+        window.addEventListener("scroll", buttonFilter)
+        return () => {
+            window.removeEventListener("scroll", buttonFilter)
+        }
     }, [listRef])
 
     useEffect(() => {

@@ -4,24 +4,27 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 import Header from './Header'
 import Footer from './Footer'
-
+import ProductViewModal from './ProductViewModal'
+import productData from '../assets/fake-data/products'
 
 import Routes from '../routes/Routes'
 
 const Layout = () => {
+
     return (
         <BrowserRouter>
             <Route render={props => (
                 <div>
-                    <Header {...props}/>
+                    <Header {...props} />
                     <div className="container">
                         <div className="main">
-                            <Routes/>
+                            <Routes />
                         </div>
                     </div>
-                    <Footer/>
+                    <Footer />
+                    <ProductViewModal />
                 </div>
-            )}/>
+            )} />
         </BrowserRouter>
     )
 }
