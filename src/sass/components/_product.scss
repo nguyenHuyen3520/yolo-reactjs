@@ -1,38 +1,37 @@
-.product{
+.product {
     @include flex(flex-start, flex-start);
 
-    @include mobile{
+    @include mobile {
         flex-direction: column;
     }
 
     &__images {
         @include flex(flex-start, flex-start);
-
         width: 60%;
-        flex-wrap: wrap ;
+        flex-wrap: wrap;
 
-        @include tablet{
+        @include tablet {
             width: 80%;
         }
 
-        @include mobile{
+        @include mobile {
             width: 100%;
         }
 
-        &__list{
+        &__list {
             width: 20%;
 
-            &__item{
+            &__item {
                 cursor: pointer;
             }
         }
 
-        &__main{
+        &__main {
             flex-grow: 1;
             padding-top: 100%;
             position: relative;
 
-            img{
+            img {
                 position: absolute;
                 top: 0;
                 left: 50%;
@@ -42,87 +41,85 @@
         }
     }
 
-    &__info{
+    &__info {
         flex-grow: 1;
         position: sticky;
         top: $header-shrink-height;
         padding-top: 2rem;
 
-        @include mobile{
+        @include mobile {
             position: relative;
             top: unset;
         }
 
-        &__title{
-            font-size: 2.5 rem;
+        &__title {
+            font-size: 2.5rem;
             font-weight: normal;
         }
 
-        &__item{
+        &__item {
             margin-top: 2rem;
 
-            &__price{
+            &__price {
                 color: $main-color;
                 font-size: 2rem;
                 font-weight: 600;
             }
 
-            &__title{
+            &__title {
                 font-size: 1.5rem;
                 font-weight: 600;
                 margin-bottom: 1rem;
             }
 
-            &__list{
+            &__list {
                 @include flex(center, flex-start);
 
-                &__item{
+                &__item {
                     @include flex(center, center);
+
                     width: 50px;
                     height: 50px;
-                    line-height: 3rem;
-                    text-align: center;
                     border-radius: 50%;
                     border: 2px solid $txt-second-color;
                     cursor: pointer;
                     margin-right: 1rem;
-                    text-transform: uppercase;
-                    
 
-                    @include mobile{
+                    @include mobile {
                         width: 40px;
                         height: 40px;
                     }
 
-                    &.active{
+                    &.active {
                         border-color: $main-color;
                     }
 
-                    &:hover{
-                        border-color: $main-color ;
+                    &:hover {
+                        border-color: $main-color;
                     }
-    
-                    .circle{
+
+                    .circle {
                         width: 40px;
                         height: 40px;
                         border-radius: 50%;
-                        @include mobile{
+
+                        @include mobile {
                             width: 30px;
                             height: 30px;
                         }
                     }
 
-                    &__size{
-                        font-size: 1.5rem;                        
+                    &__size {
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
                     }
                 }
-
             }
 
             &__quantity {
                 @include flex(flex-start, flex-start);
 
-                &__btn{
+                &__btn {
                     @include flex(center, center);
                     width: 30px;
                     height: 30px;
@@ -131,41 +128,39 @@
                     cursor: pointer;
                 }
 
-                &__input{
+                &__input {
                     @include flex(center, center);
                     height: 30px;
-                    width: 50px;
+                    width: 90px;
                     font-size: 1.5rem;
                     border-top: 2px solid $txt-second-color;
                     border-bottom: 2px solid $txt-second-color;
                 }
             }
 
-            button{
+            button {
                 margin-right: 1rem;
-                margin-bottom: 1rem
-            };
+                margin-bottom: 1rem;
+            }
         }
-
-
     }
-
 }
 
-.product__description{
+.product-description {
     width: 100%;
     padding: 2rem 2rem 3rem;
     height: 400px;
     overflow: hidden;
     position: relative;
 
-    @include mobile{
+    @include mobile {
         display: none;
     }
 
-    &.mobile{
+    &.mobile {
         display: none;
-        @include mobile{
+
+        @include mobile {
             display: block;
         }
     }
@@ -174,19 +169,19 @@
         height: max-content;
     }
 
-    &__title{
+    &__title {
         font-size: 1.5rem;
         font-weight: 600;
         margin: 2rem 0;
     }
 
-    &__content{
+    &__content {
         font-size: 1.25rem;
         line-height: 1.875rem;
         text-align: justify;
     }
 
-    &__toggle{
+    &__toggle {
         position: absolute;
         bottom: 0;
         left: 50%;
